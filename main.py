@@ -52,7 +52,8 @@ for linha in tabela.index:
     pag.press('tab')
     pag.write(custo)
     pag.press('tab')
-    pag.write(obs)
+    if obs.upper() != 'NAN':
+        pag.write(obs)
     pag.press('tab')
     pag.press('enter')
     pag.scroll(5000)
